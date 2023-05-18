@@ -1,0 +1,16 @@
+application:
+  title: Microservicios de Pedidos - Consumer
+  version: 1.0.0
+  author: Galaxy Training
+spring:
+  application:
+    name: ms-ventas-gestion-pedidos-consumer
+    
+  cloud:
+    config:
+      uri: http://localhost:8888
+      fail-fast: true
+      retry:
+         max-attempts: 20
+         max-interval: 15000
+         initial-interval: 10000

@@ -1,0 +1,28 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: ms-admin-config-server
+  #Configuracion Local
+  #  profiles:
+  #    active: native
+  #  cloud:
+  #    config:
+  #      server:
+  #        native:
+  #          searchLocations: file:///D:/AmbDesarrollo/Cursos/2022/MS-02-2022-V2/ms-admin-server-data
+
+  #Configuracion Cloud (git)
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/christianCarranza/java-msvc-gestion-ventas.git
+          search-paths:
+            - ms-admin-server-data
+          username: carranzachristian61@gmail.com
+          password: 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
+          clone-on-start: true
+          force-pull: true
+          timeout: 5
+          default-label: master

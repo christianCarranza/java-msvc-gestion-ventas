@@ -5,11 +5,12 @@ server:
 spring:
   data:
     mongodb:
-      database: MS_02_2022_PEDIDOS_QUERY
+      uri: mongodb://localhost:27017/MS_02_2022_PEDIDOS_QUERY
+      #database: MS_02_2022_PEDIDOS_QUERY
       #        username:
       #        password:
-      host: localhost
-      port: 27017
+      #host: localhost
+      #port: 27017
 
 # Registry Client
 eureka:

@@ -1,29 +1,23 @@
-
-#application:
-#  title: Microservicios de Pedidos - Query
-#  version: 1.0.0
-#  author: Galaxy Training
-
 server:
   port: 8084
-    
+
 # MongoDB #
 spring:
-   data:
-      mongodb:
-         database: MS_02_2022_PEDIDOS_QUERY
-#        username:
-#        password:
-         host: localhost
-         port: 27017
+  data:
+    mongodb:
+      database: MS_02_2022_PEDIDOS_QUERY
+      #        username:
+      #        password:
+      host: localhost
+      port: 27017
 
 # Registry Client
 eureka:
-   client:
-      fetch-registry: true
-      serviceUrl:
-         defaultZone: http://localhost:8889/eureka
-         
+  client:
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8889/eureka
+
 #Metrics related configurations
 management:
   endpoint:
@@ -32,11 +26,11 @@ management:
     prometheus:
       enabled: true
     gateway:
-      enabled: true   
+      enabled: true
   endpoints:
-      web:
-        exposure:
-          include: "*"
+    web:
+      exposure:
+        include: "*"
   metrics:
     export:
       prometheus:
